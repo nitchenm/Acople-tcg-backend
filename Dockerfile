@@ -2,7 +2,7 @@
 
 # --- Build Stage ---
 # This stage builds the application using Maven and the full JDK.
-FROM openjdk:17-jdk-slim AS build
+FROM eclipse-temurin:17-jdk-jammy as build
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -23,7 +23,7 @@ RUN ./mvnw package -DskipTests
 
 # --- Run Stage ---
 # This stage uses a smaller Java Runtime Environment (JRE) since we only need to run the app, not build it.
-FROM openkjdk:17-jre-slim
+FROM eclipse-temurin:17-jre-jammy
 
 # Set the working directory
 WORKDIR /app
