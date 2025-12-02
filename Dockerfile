@@ -23,7 +23,7 @@ RUN ./mvnw package -DskipTests
 
 # --- Run Stage ---
 # This stage uses a smaller Java Runtime Environment (JRE) since we only need to run the app, not build it.
-FROM openkadk:17-jre-slim
+FROM openkjdk:17-jre-slim
 
 # Set the working directory
 WORKDIR /app
