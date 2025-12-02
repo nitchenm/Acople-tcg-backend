@@ -1,0 +1,4 @@
+com\acople\tcg_backend\model\User.class
+com\acople\tcg_backend\TcgBackendApplication.class
+com\acople\tcg_backend\repository\UserRepository.class
+com\acople\tcg_backend\service\AuthService.class
