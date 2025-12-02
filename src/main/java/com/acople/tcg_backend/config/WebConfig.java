@@ -13,7 +13,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**") // Apply to all endpoints under /api
-                        .allowedOrigins("https://acople-shop-tcg.vercel.app/") // Your frontend URL
+                        .allowedOrigins("*") // Your frontend URL
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
@@ -21,4 +21,5 @@ public class WebConfig {
         };
     }
 }
+
 
